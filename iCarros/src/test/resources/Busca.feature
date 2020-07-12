@@ -10,14 +10,14 @@ Funcionalidade: Busca de veiculos
 
   Cenario: Retornar veiculos até 100 mil
     Dado que entro no site iCarros
-    E procuro um "Volkswagen" "Polo" novo de até "100" mil
+    E procuro um "Jeep" "Renegade" novo de até "100" mil
     Quando realizo uma busca
-    Então a mensagem "Volkswagen Polo 0km" é exibida
+    Então a mensagem "Jeep Renegade 0km" é exibida
     E é exibido uma lista de veículos
 
   Cenario: Validar modelo e valor dos dois primeiros veículos da lista
     Dado que entro no site iCarros
-    E procuro um "Ford" "Fusion" usado
+    E procuro um "Citroen" "DS4" usado
     Quando realizo uma busca
-    Então a mensagem "Ford Fusion usados" é exibida
+    Então a mensagem "Citroën DS4 usados" é exibida
     E é exibido o modelo e valor dos dois primeiros veículos

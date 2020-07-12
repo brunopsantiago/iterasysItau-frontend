@@ -13,11 +13,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import static java.lang.Thread.sleep;
 import static org.hamcrest.CoreMatchers.containsString;
-import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 public class BuscaSteps {
 
@@ -105,21 +104,16 @@ public class BuscaSteps {
 
     @Então("^é exibido o modelo e valor dos dois primeiros veículos$")
     public void é_exibido_o_modelo_e_valor_dos_dois_primeiros_veículos() throws Throwable {
-        sleep(10000);
-        WebElement dadosVeic = driver.findElement(By.cssSelector("div[class='clearfix dados_anuncio']"));
-        sleep(10000);
-        WebElement nomeValorCarro = driver.findElement(withTagName("a").above(dadosVeic));
 
-        System.out.println(nomeValorCarro.getText());
+        //WebElement h2 = driver.findElement(By.cssSelector("h2[class='esquerda titulo_anuncio']"));
+        //WebElement aLink = driver.findElement(withTagName("a").above(By.cssSelector("div[class='badges-container']")));
+       // System.out.println(aLink.getText());
 
-/*
-        List<WebElement> divCarro = driver.findElements(By.cssSelector("a[class='clearfix']"));
+        List<WebElement> divCarro = driver.findElements(By.cssSelector("h2[class='esquerda titulo_anuncio']"));
         for (WebElement element : divCarro) {
             System.out.println(element.getText());
-            //System.out.println(driver.findElement(By.cssSelector("h2[class='esquerda titulo_anuncio']")).getText());
-            //System.out.println(driver.findElement(By.cssSelector("h3[class='direita preco_anuncio']")).getText());
             System.out.println("-----------------");
-        }*/
+        }
     }
 
 }
